@@ -3,7 +3,7 @@
 # Turn off ufw or open a specific port for kubeflow installation
 
 #---------------- install nfs-utils for binding pv to PVCs by storage class
-apt install -y nfs-common
+yum install -y nfs-utils
 
 #---------------- set nfs-client storage class as default
 kubectl patch storageclass nfs-client -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
